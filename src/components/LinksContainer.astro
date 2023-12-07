@@ -3,11 +3,11 @@ import NavElement from "./NavElement.astro";
 import Menu from "../icons/menu.astro"
 
 ---
-<div class="block gap-2 items-center sm:flex">
-    <button>
+<div class="block gap-2 items-center sm:flex relative w-full"  x-data="{expand:false}">
+    <button @click="expand=!expand">
         <Menu clases="text-purple-300 block sm:hidden"/>
     </button>
-    <ul class="hidden sm:flex items-center gap-1">
+    <ul class="sm:flex sm:stat items-center gap-1" :class="expand?'absolute w-full bg-purple-700 bg-opacity-50':'hidden'">
         <NavElement href="#Saga" title="Saga"/>
         <NavElement href="#Juegos" title="Juegos"/>
         <NavElement href="#Naciones" title="Naciones"/>

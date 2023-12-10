@@ -16,11 +16,17 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class=" bg-cover bg-fixed  bg-no-repeat">
 		<slot />
 	</body>
 </html>
-<style is:global>
+<style>
+	body{
+		background:url(https://drive.google.com/uc?id=1q5zPvSEmkIS5e3fQPG4Ok12Wnaj2sUe5);
+		background-position: center top;
+	}
+</style>
+<!-- <style is:global>
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -48,4 +54,4 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
-</style>
+</style> -->

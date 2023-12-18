@@ -1,20 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Navbar from '../components/navbar.astro';
+import Parallax from '../components/Parallax.astro';
 ---
 
 <Layout title="Neptunia FanPage">
 	<Navbar/>
 	<main class="max-w-7xl border m-auto">
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			
-		</ul>
+	<Parallax fondo='https://drive.google.com/uc?id=1poPbC5Wx5rwq-teLd3YXjnlw3iY4VPac' textColor="white"/>
 	</main>
 	<p id="Juegos" class="text-white">Juegos</p>
 </Layout>

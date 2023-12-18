@@ -1,0 +1,17 @@
+---
+interface Props {
+    fondo:string,
+    textColor:string
+};
+const {fondo,textColor}=Astro.props;
+console.log(typeof(fondo));
+---
+<div class="parallax sw-full p-2 bg-no-repeat bg-cover bg-fixed" style={'background-image:url('+fondo+')'}>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos possimus ab eos neque et officiis pariatur, vitae consequuntur, officia, aliquam adipisci saepe tempore placeat velit exercitationem quibusdam qui eum suscipit?{fondo}
+</div>
+<style define:vars={{textColor}}>
+.parallax{
+    background-position: center top;
+    color: var(--textColor);
+}
+</style>

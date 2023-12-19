@@ -6,67 +6,23 @@ import Parallax from '../components/Parallax.astro';
 
 <Layout title="Neptunia FanPage">
 	<Navbar/>
-	<main class="max-w-7xl border m-auto">
-	<Parallax fondo='https://drive.google.com/uc?id=1poPbC5Wx5rwq-teLd3YXjnlw3iY4VPac' textColor="white"/>
+	<main class="max-w-7xl m-auto">
+	<Parallax fondo='https://drive.google.com/uc?id=1poPbC5Wx5rwq-teLd3YXjnlw3iY4VPac' textColor="white">
+		<div class="flex flex-wrap items-center justify-center gap-2 my-5">
+			<figure class=" max-w-sm">
+				<img src="https://drive.google.com/uc?id=1jgTpxJ-IC9GpkJFx5SrBciO8yzAwpNL6" alt="Logo Neptunia" class="w-full" alt="logo Neptunia">
+			</figure>
+			<div class=" max-w-lg px-2 sm:px-0 text-lg">
+				<p>
+					<strong><i>"Hyperdimension Neptunia"</i></strong> es una serie de videojuegos desarrollado por CompileHearth e IdeaFactory.
+				</p>
+				<p>
+					Su principal trama trata sobre la guerra de consolas y temas populares en el mundo del anime y  los videojuegos.
+				</p>
+			</div>
+		</div>
+	</Parallax>
 	</main>
-	<p id="Juegos" class="text-white">Juegos</p>
 </Layout>
 
-<!-- <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style> -->
+

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/navbar.astro';
 import Parallax from '../components/Parallax.astro';
+import Seccion from '../components/Seccion.astro';
 ---
 
 <Layout title="Neptunia FanPage">
@@ -14,7 +15,7 @@ import Parallax from '../components/Parallax.astro';
 			</figure>
 			<div class=" max-w-lg px-2 sm:px-0 text-lg">
 				<p>
-					<strong><i>"Hyperdimension Neptunia"</i></strong> es una serie de videojuegos desarrollado por CompileHearth e IdeaFactory.
+					<strong><em>"Hyperdimension Neptunia"</em></strong> es una serie de videojuegos desarrollado por CompileHearth e IdeaFactory.
 				</p>
 				<p>
 					Su principal trama trata sobre la guerra de consolas y temas populares en el mundo del anime y  los videojuegos.
@@ -22,7 +23,24 @@ import Parallax from '../components/Parallax.astro';
 			</div>
 		</div>
 	</Parallax>
+	<Seccion ancla='Saga' title='Sobre la saga'>
+		<div class="px-3 py-2 text-lg section-content flex gap-2 flex-col items-center">
+			<p>
+				<strong><em>"Hyperdimension Neptunia"</em></strong> es una serie de videojuegos desarrollado por CompileHearth e IdeaFactory.
+			</p>
+			<p>
+				La historia principal se desarrolla en GameDustry, un mndo conformado por cuatro naciones principales: Planetune, Lastation, Leambox y Lowee. Cada nación es gobernada por una diosa guardiana (CPU) donde cada una representa a una consola popular.
+			</p>
+			<p>
+				Todas las naciones conviven en armonía compitiendo por la devoción de las personas para así ganar más <i>Share-energy</i> para su nación, sim embargo, en cada entrega, las diosas se enfrentaran a distintos problemas que pueden poner en peligro a su propio mundo.
+			</p>
+		</div>
+	</Seccion>
 	</main>
 </Layout>
-
+<style>
+	.section-content>p{
+		max-width: 50rem;
+	}
+</style>
 

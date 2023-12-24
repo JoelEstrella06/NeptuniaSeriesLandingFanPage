@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/navbar.astro';
 import Parallax from '../components/Parallax.astro';
 import Seccion from '../components/Seccion.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="Neptunia FanPage">
@@ -24,21 +25,34 @@ import Seccion from '../components/Seccion.astro';
 		</div>
 	</Parallax>
 	<Seccion ancla='Saga' title='Sobre la saga'>
-		<div class="px-3 py-2 text-lg section-content flex gap-2 flex-col items-center">
-			<p>
-				<strong><em>"Hyperdimension Neptunia"</em></strong> es una serie de videojuegos desarrollado por CompileHearth e IdeaFactory.
-			</p>
-			<p>
-				La historia principal se desarrolla en GameDustry, un mndo conformado por cuatro naciones principales: Planetune, Lastation, Leambox y Lowee. Cada nación es gobernada por una diosa guardiana (CPU) donde cada una representa a una consola popular.
-			</p>
-			<p>
-				Todas las naciones conviven en armonía compitiendo por la devoción de las personas para así ganar más <i>Share-energy</i> para su nación, sim embargo, en cada entrega, las diosas se enfrentaran a distintos problemas que pueden poner en peligro a su propio mundo.
-			</p>
+		<div class="px-3 pt-3 pb-4 flex gap-2 items-center flex-col-reverse sm:flex-row rounded-b-lg bg-violet-900 bg-opacity-70 text-violet-100">
+			<div class="section-content text-lg flex flex-col gap-2">
+				<p>
+					<strong><em>"Hyperdimension Neptunia"</em></strong> es una serie de videojuegos desarrollado por CompileHearth e IdeaFactory.
+				</p>
+				<p>
+					La historia principal se desarrolla en GameDustry, un mndo conformado por cuatro naciones principales: Planetune, Lastation, Leambox y Lowee. Cada nación es gobernada por una diosa guardiana (CPU) donde cada una representa a una consola popular.
+				</p>
+				<p>
+					Todas las naciones conviven en armonía compitiendo por la devoción de las personas para así ganar más <i>Share-energy</i> para su nación, sim embargo, en cada entrega, las diosas se enfrentaran a distintos problemas que pueden poner en peligro a su propio mundo.
+				</p>
+			</div>
+			<figure class=" max-w-sm rounded-md overflow-hidden relative after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:shadow-inner after:shadow-violet-900 after:rounded-md">
+				<img src="https://drive.google.com/uc?id=1EP4neqJe_f24vKdRtU5YRioAgnWB3hVe" alt="game dustri">
+			</figure>
+		</div>
+	</Seccion>
+	<Seccion ancla='Juegos' title='Entregas'>
+		<div>
+			<Card title='g' href='#' cover='https://drive.google.com/uc?id=1p-ZBEUliXa-Uop8_scLEGUNQ4VrntNUL'></Card>
 		</div>
 	</Seccion>
 	</main>
 </Layout>
 <style>
+	html{
+		scroll-behavior: smooth;
+	}
 	.section-content>p{
 		max-width: 50rem;
 	}

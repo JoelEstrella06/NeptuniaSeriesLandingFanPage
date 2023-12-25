@@ -4,6 +4,8 @@ import Navbar from '../components/navbar.astro';
 import Parallax from '../components/Parallax.astro';
 import Seccion from '../components/Seccion.astro';
 import Card from '../components/Card.astro';
+import Steam from '../icons/Steam.astro';
+import PsVita from '../icons/PsVita.astro';
 ---
 
 <Layout title="Neptunia FanPage">
@@ -44,9 +46,19 @@ import Card from '../components/Card.astro';
 	</Seccion>
 	<Seccion ancla='Juegos' title='Entregas'>
 		<div>
-			<Card title='g' href='#' cover='https://drive.google.com/uc?id=1p-ZBEUliXa-Uop8_scLEGUNQ4VrntNUL'></Card>
+			<Card title='Hyperdimension Neptunia Re;Bith 1' cover='https://drive.google.com/uc?id=1p-ZBEUliXa-Uop8_scLEGUNQ4VrntNUL'>
+				<di class="flex gap-2 justify-center items-center">
+					<a href="" target="_blank">
+						<Steam clases="w-8 h-8"/>
+					</a>
+					<a href="" target="_blank">
+						<PsVita clases="w-16 h-16"/>
+					</a>
+				</div>
+			</Card>
 		</div>
 	</Seccion>
+	<div class="h-96"></div>
 	</main>
 </Layout>
 <style>

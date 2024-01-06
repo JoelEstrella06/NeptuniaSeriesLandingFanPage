@@ -7,12 +7,12 @@ interface Props {
 const {title,cover } = Astro.props;
 ---
 
-<div class="relative block max-w-sm rounded-lg overflow-hidden">
+<div class="relative block max-w-80 rounded-lg overflow-hidden border-2 border-blue-900">
 	<figure class="w-full">
 		<img src={cover} alt="entrega" class="w-full">
 	</figure>
-	<div class="absolute top-full w-full h-full bg-violet-900 text-violet-200 bg-opacity-80 flex flex-col justify-center items-center gap-2 transition-all duration-300">
-		<h2 class="font-semibold text-lg">{title}</h2>
+	<div class="sm:absolute top-full w-full sm:h-full bg-blue-900 text-blue-200 divide-y-2 sm:divide-y-4 divide-blue-500 max-sm:divide-opacity-50 sm:bg-opacity-80 flex flex-col justify-center items-center gap-1 transition-all duration-300 px-2 py-1">
+		<h2 class="font-semibold text-lg sm:text-xl text-center">{title}</h2>
 		<slot/>
 	</div>
 </div>

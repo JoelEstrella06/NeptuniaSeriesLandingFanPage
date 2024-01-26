@@ -7,6 +7,7 @@ import Card from '../components/Card.astro';
 import Steam from '../icons/Steam.astro';
 import PsVita from '../icons/PsVita.astro';
 import Play4 from '../icons/Play4.astro';
+import Character from '../components/Character.astro';
 ---
 
 <Layout title="Neptunia FanPage">
@@ -44,6 +45,11 @@ import Play4 from '../icons/Play4.astro';
 				<img src="/src/imgs/pictures/Gamindustri.png" alt="game dustri">
 			</figure>
 		</div>
+	</Seccion>
+	<Seccion ancla='Personajes' title='Personaje'>
+		<Character human='/src/imgs/characters/noire.png' megami='/src/imgs/characters/black.png'/>
+		<Character human='/src/imgs/characters/nep.png' megami='/src/imgs/characters/purple.png'/>
+
 	</Seccion>
 	<Seccion ancla='Juegos' title='Entregas'>
 		<div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">

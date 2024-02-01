@@ -47,8 +47,12 @@ import Character from '../components/Character.astro';
 		</div>
 	</Seccion>
 	<Seccion ancla='Personajes' title='Personaje'>
-		<Character human='/src/imgs/characters/noire.png' megami='/src/imgs/characters/black.png'/>
-		<Character human='/src/imgs/characters/nep.png' megami='/src/imgs/characters/purple.png'/>
+		<div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">
+			<Character human='/src/imgs/characters/nep.png' megami='/src/imgs/characters/purple.png' nameHuman='Neptune' nameMegami='Purple Heart'/>
+			<Character human='/src/imgs/characters/noire.png' megami='/src/imgs/characters/black.png' nameHuman='Noire' nameMegami='Black Heart'/>
+			<Character human='/src/imgs/characters/vert.png' megami='/src/imgs/characters/green.png' nameHuman='Vert' nameMegami='Green Heart'/>
+			<Character human='/src/imgs/characters/blanc.png' megami='/src/imgs/characters/white.png' nameHuman='Neptune' nameMegami='White Heart'/>
+		</div>
 
 	</Seccion>
 	<Seccion ancla='Juegos' title='Entregas'>

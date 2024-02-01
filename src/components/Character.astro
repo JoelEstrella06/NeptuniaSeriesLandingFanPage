@@ -1,14 +1,18 @@
 ---
+import Change from '../icons/Change.astro';
+
 interface Props {
     human:string,
     megami:string,
+    nameHuman:string,
+    nameMegami:string
 }
-const{human,megami}=Astro.props;
+const{human,megami,nameHuman,nameMegami}=Astro.props;
 ---
-<div class="border-4 border-blue-900 rounded-md max-w-80 overflow-hidden" x-data="{change:false}">
+<div class="border-4 border-blue-900 bg-blue-800 bg-opacity-60 rounded-md max-w-80 overflow-hidden" x-data="{change:false}">
     <div class="relative overflow-hidden">
-        <button class="border-2 p-3 z-20 absolute top-0" @click="change=!change">
-            change
+        <button class="bg-purple-950 p-3 m-2 z-20 absolute top-0 size-12 flex justify-center items-center rounded-full " @click="change=!change">
+            <Change clases="text-purple-200"/>
         </button>
         <span></span>
         <figure class="max-w-72">
@@ -18,7 +22,12 @@ const{human,megami}=Astro.props;
             <img src={megami} alt="diosa" class="w-full transition-all duration-300" :class="change?'brightness-100':'brightness-0'">
         </figure>
     </div>
-    <div class="p-2 bg-blue-900 text-blue-200">
-        <strong x-text="change?'Black Heart':'Noire'"></strong>
+    <div class="px-2 py-1 bg-blue-900 text-blue-200 text-center text-xl">
+        <template x-if="!change">
+            <strong>{nameHuman}</strong>
+        </template>
+        <template x-if="change">
+            <strong>{nameMegami}</strong>
+        </template>
     </div>
 </div>

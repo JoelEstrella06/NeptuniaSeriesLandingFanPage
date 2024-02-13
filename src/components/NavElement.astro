@@ -5,6 +5,6 @@ interface Props {
 }
 const {href,title}=Astro.props
 ---
-<li class="text-white p-1 hover:border-b-2 border-purple-300">
+<li class="text-white p-1 border-b-2 border-purple-800 hover:border-purple-300 transition-all duration-300">
     <a href={href}>{title}</a>
 </li>

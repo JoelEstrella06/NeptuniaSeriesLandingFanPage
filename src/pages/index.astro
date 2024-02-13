@@ -8,13 +8,15 @@ import Steam from '../icons/Steam.astro';
 import PsVita from '../icons/PsVita.astro';
 import Play4 from '../icons/Play4.astro';
 import Character from '../components/Character.astro';
+import Footer from '../components/Footer.astro';
+import Nation from '../components/Nation.astro';
 ---
 
 <Layout title="Neptunia FanPage">
 	<Navbar/>
 	<main class="max-w-7xl m-auto">
 	<Parallax fondo='/src/imgs/backgrounds/capitulos.png' textColor="white">
-		<div class="flex flex-wrap items-center justify-center gap-2 my-5">
+		<div class="flex flex-wrap items-center justify-center gap-2 px-2 py-5">
 			<figure class=" max-w-sm">
 				<img src="/src/imgs/logo.png" alt="Logo Neptunia" class="w-full" alt="logo Neptunia">
 			</figure>
@@ -55,11 +57,16 @@ import Character from '../components/Character.astro';
 		</div>
 
 	</Seccion>
+	<Seccion ancla='Juegos' title='Naciones'>
+		<div class="pt-4">
+			<Nation titulo='Lastation' href='#' nacion="/src/imgs/logos/Lastation_Logo.png"/>
+		</div>
+	</Seccion>
 	<Seccion ancla='Juegos' title='Entregas'>
 		<div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">
 			<Card title='Hyperdimension Neptunia Re;Bith 1' cover='/src/imgs/games/HNR1.png'>
 				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
-					<a href="" target="_blank">
+					<a href="https://store.steampowered.com/app/282900/Hyperdimension_Neptunia_ReBirth1/" target="_blank">
 						<Steam clases="size-8"/>
 					</a>
 					<a href="" target="_blank">
@@ -122,8 +129,8 @@ import Character from '../components/Character.astro';
 			</Card>
 		</div>
 	</Seccion>
-	<div class="h-96"></div>
-	</main>
+</main>
+<Footer/>
 </Layout>
 <style>
 	html{

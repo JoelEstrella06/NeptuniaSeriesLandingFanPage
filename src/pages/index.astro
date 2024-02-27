@@ -13,8 +13,6 @@ import Nation from '../components/Nation.astro';
 ---
 
 <Layout title="Neptunia FanPage">
-	<Navbar/>
-	<main class="max-w-7xl m-auto">
 	<Parallax fondo='/src/imgs/backgrounds/capitulos.png' textColor="white">
 		<div class="flex flex-wrap items-center justify-center gap-2 px-2 py-5">
 			<figure class=" max-w-sm">
@@ -59,7 +57,7 @@ import Nation from '../components/Nation.astro';
 	</Seccion>
 	<Seccion ancla='Naciones' title='Naciones'>
 		<div class="pt-4">
-			<Nation titulo='Lastation' href='#' nacion="/src/imgs/logos/Lastation_Logo.png" bg="/src/imgs/backgrounds/lastation_bg.jpg"/>
+			<Nation titulo='Lastation' href='/world/Lastation' nacion="/src/imgs/logos/Lastation_Logo.png" bg="/src/imgs/backgrounds/lastation_bg.jpg" transition:name='lastation'/>
 			<Nation titulo='Planetune' href='#' nacion="/src/imgs/logos/Planetune_Logo.png" bg="/src/imgs/backgrounds/planetune_bg.png"/>
 			<Nation titulo='Leambox' href='#' nacion="/src/imgs/logos/Leambox_Logo.png" bg="/src/imgs/backgrounds/leambox_bg.png"/>
 			<Nation titulo='Lowee' href='#' nacion="/src/imgs/logos/Lowee_Logo.png" bg="/src/imgs/backgrounds/lowee_bg.png"/>
@@ -132,8 +130,6 @@ import Nation from '../components/Nation.astro';
 			</Card>
 		</div>
 	</Seccion>
-</main>
-<Footer/>
 </Layout>
 <style>
 	html{

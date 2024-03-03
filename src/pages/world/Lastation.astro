@@ -1,25 +1,43 @@
 ---
+import CharacterNation from "../../components/CharacterNation.astro";
 import NationLayout from "../../layouts/NationLayout.astro";
 ---
 <NationLayout title="Lastation" fondo="/src/imgs/backgrounds/lastation_bg.jpg">
-    <div class="flex gap-3 justify-center items-center text-cyan-200">
+    <div class="flex gap-3 justify-center items-center text-gray-200">
         <figure class="size-52">
             <img src="/src/imgs/logos/Lastation_Logo.png" alt="Lastation logo" class="w-full">
         </figure>
         <h1 class="text-xl font-medium">Lastation</h1>
     </div>
-    <section class="bg-black bg-opacity-30 h-96 shadow-top text-cyan-300 mt-2">
+    <section class="bg-black bg-opacity-30 shadow-top text-gray-300 mt-2">
         <article class="max-w-7xl m-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt porro voluptatem fuga ipsam, ex distinctio dicta nostrum exercitationem earum rerum dolorum impedit expedita accusantium, esse molestias facilis possimus amet tempora.
-            Asperiores provident sequi nostrum debitis, et voluptatem quaerat, facere veritatis voluptas enim illum fuga illo fugiat sapiente repellat sed eos magni. Repellendus ipsa commodi voluptatum similique facere maxime atque nesciunt.
-            Modi saepe corporis distinctio vero facilis. Nostrum ipsam corporis temporibus esse omnis consectetur, reiciendis et sunt minus, quibusdam quis repudiandae id, dignissimos inventore exercitationem? Quia quisquam similique dolorem voluptatem autem?
-            Atque, earum! Repellat magni fuga cumque ratione. Qui dolorem, deleniti mollitia officiis natus quas blanditiis? Praesentium aut totam suscipit et numquam sint vitae veritatis corrupti nam ex nulla, placeat amet!
-            Dignissimos sint temporibus obcaecati exercitationem iste nobis dolorum provident repellat magnam porro voluptatem laudantium officia tempora in quo accusantium minus, eius debitis minima iure. Doloribus ad reprehenderit iure nobis enim.
+            <div class=" m-auto text-lg text-pretty px-4 sm:px-6 py-4 sm:py-8">
+                <p>Lastation, una de las cuatro naciones principales ubucada al este de GameDustry.Esta nación destaca principalmente por su avanzada tecnología en la industria y en la seguridad que esta proporciona a sus habitantes. Esto puede dar a entender que esta nación es sumamente estricta, sin embargo, no lo es.</p>
+                <p>Su guardian <em>Black Heart</em> a pesar de tener un acaracter muy energético y desafiante, se preocupa por sus habitantes y ahce todo lo posible para mantener el orden y la paz para sus ciudadanos.</p>
+            </div>
+        </article>
+    </section>
+    <br>
+    <section  class="bg-black bg-opacity-30 shadow-top text-gray-200 mt-2 p-3">
+        <article class=" max-w-6xl m-auto">
+            <h1 class="my-2 border-b border-cyan-600 text-3xl text-cyan-600">Guardian de la nación</h1>
+            <CharacterNation human='/src/imgs/characters/noire_normal.png' megami='/src/imgs/characters/noire_megami.png'>
+                <div slot="normal-description" class=" text-balance text-lg">
+                    <h1 class="font-semibold text-2xl border-b py-2 my-2 text-cyan-300">Noire</h1>
+                    <p>Guardiana y protectora de Lastation, es una de las protagonistas de la saga. Es sumamente conocida por ser un personaje muy dedicado a su nación y cuya personalidad podría considerarse <em>tsundere</em>.</p> 
+                    <p>A pesar que existen distintas versiones de este personaje en cada una de las líneas alternas que trata la saga, su actitud en cada una de estas versiones no cambia</p>
+                </div>
+                <div slot="megami-description" class="text-balance text-lg">
+                    <h1 class="font-semibold text-2xl border-b py-2 my-2 text-cyan-300">Black Heart</h1>
+                    <p>Tranformación <em>Console Patron Unit</em> (CPU) de Noire. Al adoptar esta forma, su personalidad no cambia con respecto a las otras diosas.</p>
+                    <p>La personalidad de cuando Noire entra en este modo es muy similar a su forma humana, sin embargo, se vuelve mucho más copetitiva y energética que antes.</p>
+                </div>
+            </CharacterNation>
         </article>
     </section>
 </NationLayout>
 <style>
     .shadow-top{
-        box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.6);
     }
 </style>

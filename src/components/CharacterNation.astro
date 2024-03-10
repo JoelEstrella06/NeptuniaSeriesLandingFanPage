@@ -7,7 +7,7 @@ interface Props {
 }
 const{human,megami}=Astro.props;
 ---
-<div class="w-full grid grid-cols-1 sm:grid-cols-2 justify-items-center  overflow-hidden" x-data="{change:false}">
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 justify-items-center items-center overflow-hidden" x-data="{change:false}">
     <div class="relative overflow-hidden max-w-lg">
         <button class="bg-purple-950 p-3 m-2 z-20 absolute top-0 size-12 flex justify-center items-center rounded-full " @click="change=!change">
             <Change clases="text-purple-200"/>

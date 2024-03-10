@@ -1,0 +1,64 @@
+---
+import CharacterNation from "../../components/CharacterNation.astro";
+import NationLayout from "../../layouts/NationLayout.astro";
+---
+<NationLayout title="Lastation" fondo="/src/imgs/backgrounds/planetune_bg.png">
+    <div class="flex flex-wrap sm:gap-3 justify-center items-center text-purple-200 max-sm:mb-4">
+        <figure class="size-52">
+            <img src="/src/imgs/logos/Planetune_Logo.png" alt="Planetune logo" class="w-full">
+        </figure>
+        <h1 class="text-3xl font-medium">Planetune</h1>
+    </div>
+    <section class="bg-black bg-opacity-30 shadow-top text-violet-100 p-3">
+        <article class="max-w-6xl m-auto">
+            <div class="m-auto text-lg text-pretty px-2 sm:px-6 py-4 sm:py-8">
+                <p>Planetune, una de las cuatro naciones principales ubucada al oeste de GameDustry.Esta nación es una de la más equilibradas tanto técnologica como culturalmente. En esta nación, se puede notar la paz y la libertad en cada uno de sus habitantes. Esto es gracias al trabajo de las organizaciones, del óraculo <em>Histoire</em> y de sus guardianes protecctores.</p>
+                <p>La protectora principal, <em>Purple Heart</em>, se encarga principalmente de proteger la nación de cualquier amenaza, así como también, ayudar a sus propios ciudadanos cuando se encuentren en problemas.</p>
+            </div>
+        </article>
+    </section>
+    <br>
+    <section class="bg-black bg-opacity-30 shadow-top text-violet-100 mt-2 p-3">
+        <article class=" max-w-6xl m-auto">
+            <h1 class="my-2 border-b border-cyan-600 text-3xl text-cyan-600">Guardián de la nación</h1>
+            <CharacterNation human='/src/imgs/characters/neptune_normal.png' megami='/src/imgs/characters/neptune_megami.png'>
+                <div slot="normal-description" class=" text-balance text-lg">
+                    <h1 class="font-semibold text-2xl border-b py-2 my-2 text-purple-300">Neptune</h1>
+                    <p>Este personaje es la personificación de una consola de la empresa SEGA que no vió la luz, la <em>SEGA NEPTUNE</em>.</p>
+                    <p>Ella es la guardiana principal de Planetune, quien ella misma llega a declararse como la <em>"protagonista"</em> de la saga.</p>
+                    <p>Neptune es una chica muy energética que le gusta pasar todo el día haciendo cosas divertidas, como jugar videojuegos, salir de paseo, descansar etc.. Esto le lleva en ciertas ocasiones, a tener problemas con Histoire. Sin embargo, a pesar de su carácter, hace lo posible para relizar sus deberes mientras se divierte en eol proceso.</p>
+                </div>
+                <div slot="megami-description" class="text-balance text-lg">
+                    <h1 class="font-semibold text-2xl border-b py-2 my-2 text-purple-300">Purple Heart</h1>
+                    <p>Tranformación <em>Console Patron Unit</em> (CPU) de Neptune. Al adoptar esta forma, podremos notar que lleva los colores más significactivos de la consola a la que representa (debido a que la consola fue descartada, se basa en especulaciones).</p>
+                    <p>Cuando Neptune adopta esta forma, sufre un cambio muy notorio de personalidad; volviendose mucho más madura, responsable y seria en su deer como guardian.</p>
+                </div>
+            </CharacterNation>
+        </article>
+    </section>
+    <br>
+    <section class="bg-black bg-opacity-30 shadow-top text-gray-200 mt-2 p-3">
+        <article class=" max-w-6xl m-auto">
+            <h1 class="my-2 border-b border-cyan-600 text-3xl text-cyan-600">Candidato a guardián</h1>
+            <CharacterNation human='/src/imgs/characters/nepgear_normal.png' megami='/src/imgs/characters/nepgear_megami.png'>
+                <div slot="normal-description" class=" text-balance text-lg">
+                    <h1 class="font-semibold text-2xl border-b py-2 my-2 text-purple-300">Nepgear</h1>
+                    <p>Es la hermana menor de Neptune y una de las mejores amigas de Nepgear.Al igual que su hermana, ella representa a una consola ficticia de SEGA.</em></p>
+                    <p> Nepgear es una chica muy alegre y fanática de la tecnología a tal punto de estar casi osesionada con ello.</p> 
+                    <p>A diferencia de su hermana, Nepgear es muy responsable con su deber de proteger a la nación, es por ello que cuando su hermana no realiza sus actividades ela misma termina realizandolas a pesar de los regaños de Histoire.</p>
+                </div>
+                <div slot="megami-description" class="text-balance text-lg">
+                    <h1 class="font-semibold text-2xl border-b py-2 my-2 text-purple-300">Purple Sister</h1>
+                    <p>Tranformación <em>Console Patron Unit</em> (CPU) de Nepgear. Al igual que el resto de diosas, ella obtiene los colores más distintivos a la consola que representa, esto son muy similares a los que obtiene Neptune.</p>
+                    <p>A diferencia de todas las diosas tanto principales como candidatas, Nepgear no sufre un cambio de personalidad en lo absoluto.</p>
+                </div>
+            </CharacterNation>
+        </article>
+    </section>
+    <br>
+</NationLayout>
+<style>
+    .shadow-top{
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.6);
+    }
+</style>

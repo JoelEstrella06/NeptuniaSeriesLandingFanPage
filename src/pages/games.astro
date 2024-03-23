@@ -1,6 +1,99 @@
 ---
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+import Steam from '../icons/Steam.astro';
+import PsVita from '../icons/PsVita.astro';
+import Play4 from '../icons/Play4.astro';
 ---
 <Layout title='games'>
-
+    <section class="mt-4">
+        <div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">
+            <Card title='Hyperdimension Neptunia Re;Bith 1' cover='/src/imgs/games/HNR1.png'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/282900/Hyperdimension_Neptunia_ReBirth1/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://neptunia.fandom.com/wiki/Hyperdimension_Neptunia_Re;Birth1" target="_blank">
+						<PsVita clases="size-12"/>
+					</a>
+					<a href="https://store.playstation.com/es-mx/product/UP0031-PPSA02721_00-NEPREVERSEGAME01" target="_blank">
+						<Play4 clases="size-10"/>
+					</a>
+				</div>
+			</Card>
+			<Card title='Hyperdimension Neptunia Re;Bith 2' cover='/src/imgs/games/HNR2.png'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/351710/Hyperdimension_Neptunia_ReBirth2_Sisters_Generation/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://neptunia.fandom.com/wiki/Hyperdimension_Neptunia_Re;Birth2_SISTERS_GENERATION" target="_blank">
+						<PsVita clases="size-12"/>
+					</a>
+				</div>
+			</Card>
+			<Card title='Hyperdimension Neptunia Re;Bith 3' cover='/src/imgs/games/HNR3.png''>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/353270/Hyperdimension_Neptunia_ReBirth3_V_Generation/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://neptunia.fandom.com/wiki/Hyperdimension_Neptunia_Re;Birth3:_V_Generation" target="_blank">
+						<PsVita clases="size-12"/>
+					</a>
+				</div>
+			</Card>
+			<Card title='Megadimension Neptunia VII' cover='/src/imgs/games/HNRVII.png'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/460120/Megadimension_Neptunia_VII/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://store.playstation.com/es-ar/product/UP0031-CUSA03133_00-GAME000000000000" target="_blank">
+						<Play4 clases="size-10"/>
+					</a>
+				</div>
+			</Card>
+            <Card title='Hyperdevotion Noire' cover='/src/imgs/games/HNGB.png'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/282900/Hyperdimension_Neptunia_ReBirth1/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://neptunia.fandom.com/wiki/Hyperdimension_Neptunia_Re;Birth1" target="_blank">
+						<PsVita clases="size-12"/>
+					</a>
+					<a href="https://store.playstation.com/es-mx/product/UP0031-PPSA02721_00-NEPREVERSEGAME01" target="_blank">
+						<Play4 clases="size-10"/>
+					</a>
+				</div>
+			</Card>
+			<Card title='Megatagmension + Neptune: Blanc VS Zombies' cover='/src/imgs/games/MTNBNZ.png'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/496810/MegaTagmension_Blanc__Neptune_VS_Zombies_Neptunia/?l=spanish" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://neptunia.fandom.com/wiki/MegaTagmension_Blanc_%2B_Neptune_VS_Zombies" target="_blank">
+						<PsVita clases="size-12"/>
+					</a>
+				</div>
+			</Card>
+			<Card title='Cyberdimension: Four Goddesses Online' cover='/src/imgs/games/CYBERN.jpg'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/632350/Cyberdimension_Neptunia_4_Goddesses_Online/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://store.playstation.com/es-mx/product/UP0031-CUSA07960_00-CYONMEGAMIONLINE" target="_blank">
+						<Play4 clases="size-10"/>
+					</a>
+				</div>
+			</Card>
+			<Card title='Superdimension Neptunia VS Sega Hard Girls' cover='/src/imgs/games/SUPER.png'>
+				<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
+					<a href="https://store.steampowered.com/app/632350/Cyberdimension_Neptunia_4_Goddesses_Online/" target="_blank">
+						<Steam clases="size-8"/>
+					</a>
+					<a href="https://store.playstation.com/es-mx/product/UP0031-CUSA07960_00-CYONMEGAMIONLINE" target="_blank">
+						<Play4 clases="size-10"/>
+					</a>
+				</div>
+			</Card>
+        </div>
+    </section>
 </Layout>

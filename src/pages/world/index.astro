@@ -1,0 +1,23 @@
+---
+import WorldLink from "../../components/WorldLink.astro";
+import Layout from "../../layouts/Layout.astro";
+
+---
+<Layout title="Mundo">
+    <section class="mt-4">
+        <div class="overflow-hidden relative">
+            <picture class="w-full max-sm:hidden">
+                <img src="/src/imgs/pictures/Gamindustri.png" alt="mundo" class="w-full ratio-1-1">
+            </picture>
+            <WorldLink href="Planetune" nation="/src/imgs/logos/Planetune_Logo.png" position="planetune" title="Planetune"/>
+            <WorldLink href="Lastation" nation="/src/imgs/logos/Lastation_Logo.png" position="lastation" title="Lastation"/>
+            <WorldLink href="Leambox" nation="/src/imgs/logos/Leambox_Logo.png" position="leambox" title="Lastation"/>
+            <WorldLink href="Lowee" nation="/src/imgs/logos/Lowee_Logo.png" position="lowee" title="Lowee"/>
+        </div>
+    </section>
+</Layout>
+<style>
+    .ratio-1-1{
+        aspect-ratio: 1/1;
+    }
+</style>

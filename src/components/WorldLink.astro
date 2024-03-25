@@ -1,0 +1,40 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+    position:string,
+    nation:string,
+    href:string,
+    title:string
+}
+const {position,nation,href,title}=Astro.props;
+const images = import.meta.glob<{default: ImageMetadata}>('/src/imgs/logos/*.{jpeh,jpg,png}');
+/* en caso que no exista la imagen mostramos un mensaje de error */
+if (!images[nation]) throw new Error(`"${nation}" No se encontró la imagen"`);
+---
+<a href={href} class=`sm:absolute p-2 rounded-md bg-black bg-opacity-50 ${position}`>
+    <Image src={images[nation]()} alt={title} class="size-32"/>
+    <h2 class="text-center font-medium text-gray-200">{title}</h2>
+</a>
+<style>
+    .shadow-top{
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,);
+    }
+    .planetune{
+        top: 40%;
+        left: 30%;
+    }
+    .lastation{
+        bottom: 43%;
+        right: 17%;
+    }
+    .leambox{
+        bottom: 25%;
+        right: 35%;
+    }
+    .lowee{
+        top: 10%;
+        right: 30%;
+    }
+</style>

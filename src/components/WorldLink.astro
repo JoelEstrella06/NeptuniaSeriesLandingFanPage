@@ -9,15 +9,16 @@ interface Props {
     title:string
 }
 const {position,nation,href,title}=Astro.props;
+const tiempo = (Math.random() * 0.2+0.3).toFixed(1) + 's';
 const images = import.meta.glob<{default: ImageMetadata}>('/src/imgs/logos/*.{jpeh,jpg,png}');
 /* en caso que no exista la imagen mostramos un mensaje de error */
 if (!images[nation]) throw new Error(`"${nation}" No se encontró la imagen"`);
 ---
-<a href={href} class=`sm:absolute p-2 rounded-md bg-black bg-opacity-50 ${position}`>
-    <Image src={images[nation]()} alt={title} class="size-32"/>
-    <h2 class="text-center font-medium text-gray-200">{title}</h2>
+<a href={href} class=`animacion flex flex-col items-center justify-center gap-3 border-y border-black sm:border-0 sm:absolute p-2 sm:rounded-md bg-black bg-opacity-50 ${position}`>
+    <Image src={images[nation]()} alt={title} class="size-52 sm:size-32"/>
+    <h2 class="text-center font-medium text-3xl sm:text-lg text-gray-200">{title}</h2>
 </a>
-<style>
+<style define:vars={{tiempo}}>
     .shadow-top{
         box-shadow: 0px 0px 20px 0px rgba(0,0,0,);
     }
@@ -37,4 +38,22 @@ if (!images[nation]) throw new Error(`"${nation}" No se encontró la imagen"`);
         top: 10%;
         right: 30%;
     }
+    .animacion{
+		animation-name: zoomIn;
+		animation-duration: var(--tiempo);
+	}
+	@keyframes zoomIn{
+		0%{
+			transform: scale(0);
+		}
+		50%{
+			transform: scale(1);
+		}
+		70%{
+			transform: scale(0.7);
+		}
+		100%{
+			transform: scale(1);
+		}
+	}
 </style>

@@ -1,7 +1,7 @@
 ---
 import NavElement from "./NavElement.astro";
 import Menu from "../icons/menu.astro"
-
+const url=Astro.url.pathname;
 ---
 <div class="block gap-2 items-center sm:flex relative w-full max-sm:px-2 sm:w-fit"  x-data="{expand:false}">
     <button @click="expand=!expand" aria-label="menu">

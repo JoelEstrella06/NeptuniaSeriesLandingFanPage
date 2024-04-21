@@ -4,9 +4,14 @@ import Layout from '../layouts/Layout.astro';
 import Steam from '../icons/Steam.astro';
 import PsVita from '../icons/PsVita.astro';
 import Play4 from '../icons/Play4.astro';
+import Play3 from '../icons/Play3.astro';
 import Play5 from '../icons/Play5.astro'
 import Seccion from '../components/Seccion.astro';
 import NintendoSwitch from '../icons/NintendoSwitch.astro';
+import { games } from '../constants/games';
+const mainGames= games.filter((game) => game.category==='main');
+const remakeGames=games.filter((game) => game.category==='remake');
+const spinOffGames=games.filter((game) => game.category==='spin-off');
 ---
 <Layout title='games'>
     <section class=" mt-6">
@@ -14,7 +19,24 @@ import NintendoSwitch from '../icons/NintendoSwitch.astro';
 		<br>
 		<Seccion title='Historia principal' ancla="">
 			<div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">
-				<Card title='Hyperdimension Neptunia Re;Bith 1' cover='/src/imgs/games/HNR1.png'>
+				{mainGames.map((game)=>
+					<Card title={game.tittle} cover={game.cover}>
+						<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center p-1">
+							{game.plataforms.map((platform)=>
+								<a href={platform.link} target="_blank">
+									{platform.type==='pc'&&(<Steam clases="size-8"/>)}
+									{platform.type==='vita'&&(<PsVita clases="size-12"/>)}
+									{platform.type==='ps3'&&(<Play3 clases="size-10"/>)}
+									{platform.type==='ps4'&&(<Play4 clases="size-10"/>)}
+									{platform.type==='ps5'&&(<Play5 clases="size-10"/>)}
+									{platform.type==='nintendo'&&(<NintendoSwitch clases="size-8"/>)}
+									
+								</a>
+							)}
+						</div>
+					</Card>
+				)}
+				<!-- <Card title='Hyperdimension Neptunia Re;Bith 1' cover='/src/imgs/games/HNR1.png'>
 					<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
 						<a href="https://store.steampowered.com/app/282900/Hyperdimension_Neptunia_ReBirth1/" target="_blank">
 							<Steam clases="size-8"/>
@@ -56,12 +78,50 @@ import NintendoSwitch from '../icons/NintendoSwitch.astro';
 							<Play4 clases="size-10"/>
 						</a>
 					</div>
-				</Card>
+				</Card> -->
+			</div>
+		</Seccion>
+		<Seccion title='Remakes' ancla="">
+			<div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">
+				{remakeGames.map((game)=>
+					<Card title={game.tittle} cover={game.cover}>
+						<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center p-1">
+							{game.plataforms.map((platform)=>
+								<a href={platform.link} target="_blank">
+									{platform.type==='pc'&&(<Steam clases="size-8"/>)}
+									{platform.type==='vita'&&(<PsVita clases="size-12"/>)}
+									{platform.type==='ps3'&&(<Play3 clases="size-10"/>)}
+									{platform.type==='ps4'&&(<Play4 clases="size-10"/>)}
+									{platform.type==='ps5'&&(<Play5 clases="size-10"/>)}
+									{platform.type==='nintendo'&&(<NintendoSwitch clases="size-8"/>)}
+									
+								</a>
+							)}
+						</div>
+					</Card>
+				)}
 			</div>
 		</Seccion>
 		<Seccion title='Spin-off' ancla="">
 			<div class="px-3 py-4 flex flex-wrap justify-center sm:justify-evenly items-center gap-2">
-				<Card title='Hyperdevotion Noire' cover='/src/imgs/games/HNGB.png'>
+				{spinOffGames.map((game)=>
+					<Card title={game.tittle} cover={game.cover}>
+						<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center p-1">
+							{game.plataforms.map((platform)=>
+								<a href={platform.link} target="_blank">
+									{platform.type==='pc'&&(<Steam clases="size-8"/>)}
+									{platform.type==='vita'&&(<PsVita clases="size-12"/>)}
+									{platform.type==='ps3'&&(<Play3 clases="size-10"/>)}
+									{platform.type==='ps4'&&(<Play4 clases="size-10"/>)}
+									{platform.type==='ps5'&&(<Play5 clases="size-10"/>)}
+									{platform.type==='nintendo'&&(<NintendoSwitch clases="size-8"/>)}
+									
+								</a>
+							)}
+						</div>
+					</Card>
+				)}
+				<!-- <Card title='Hyperdevotion Noire' cover='/src/imgs/games/HNGB.png'>
 					<div class="w-full flex justify-evenly sm:justify-center gap-4 items-center">
 						<a href="https://store.steampowered.com/app/282900/Hyperdimension_Neptunia_ReBirth1/" target="_blank">
 							<Steam clases="size-8"/>
@@ -173,7 +233,7 @@ import NintendoSwitch from '../icons/NintendoSwitch.astro';
 							<Play4 clases="size-10"/>
 						</a>
 					</div>
-				</Card>
+				</Card> -->
 			</div>
 		</Seccion>
     </section>

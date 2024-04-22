@@ -14,16 +14,32 @@ const images=import.meta.glob<{default:ImageMetadata}>('/src/imgs/logos/*.{jpeh,
 /* en caso que no exista la imagen mostramos un mensaje de error */
 if (!images[nacion]) throw new Error(`"${nacion}" No se encontró la imagen"`);
 ---
-<Parallax textColor='white' fondo={bg}>
-    <div class="bg-black bg-opacity-65" transition:name={titulo}>
-        <a href={href} target="_self" class=" flex gap-2 justify-center items-center group">
-            <div class="relative">
-                <Picture src={images[nacion]()} alt={titulo} loading='lazy' class='size-52 group-hover:-translate-x-4 transition-all duration-300'/>
-                <h1 class="text-3xl text-gray-200 max-sm:text-center sm:-z-10 sm:opacity-0 font-medium sm:absolute top-[40%] left-1/4 group-hover:left-full group-hover:opacity-100 group-hover:z-auto transition-all duration-300">{titulo}</h1>
-            </div>
-        </a>
-    </div>
-</Parallax>
+<div class="slideX">
+    <Parallax textColor='white' fondo={bg}>
+        <div class="bg-black bg-opacity-65" transition:name={titulo}>
+            <a href={href} target="_self" class=" flex gap-2 justify-center items-center group">
+                <div class="relative">
+                    <Picture src={images[nacion]()} alt={titulo} loading='lazy' class='size-52 group-hover:-translate-x-4 transition-all duration-300'/>
+                    <h1 class="text-3xl text-gray-200 max-sm:text-center sm:-z-10 sm:opacity-0 font-medium sm:absolute top-[40%] left-1/4 group-hover:left-full group-hover:opacity-100 group-hover:z-auto transition-all duration-300">{titulo}</h1>
+                </div>
+            </a>
+        </div>
+    </Parallax>
+</div>
 <style>
-
+    .slideX{
+        animation:slide linear both ;
+        animation-timeline: view();
+        animation-range: entry 0% cover 15%;
+    }
+    @keyframes slide {
+        from{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+	}
 </style>

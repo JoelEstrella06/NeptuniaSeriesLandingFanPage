@@ -1,6 +1,23 @@
 ---
 import LinksContainer from "./LinksContainer.astro";
 ---
-<nav transition:animate="none" class="w-full sm:px-2 py-1 bg-purple-800 flex gap-2 items-center justify-end sticky top-0 z-50">
+<nav transition:animate="none" class="changeNav sm:px-2 m-auto py-2 bg-purple-800 backdrop-blur-sm flex gap-2 items-center justify-end sticky top-0 z-50">
     <LinksContainer/>
 </nav>
+<style>
+    .changeNav{
+        animation:changeNav linear both ;
+        animation-timeline: scroll();
+        animation-range: entry 0% cover 15%;
+    }
+    @keyframes changeNav {
+        from{
+            max-width: 80rem;
+        }
+        to {
+            border-radius: 0.5rem;
+            max-width: 100%;
+            background-color: rgb(107 33 168 / 0.7);
+        }
+	}
+</style>

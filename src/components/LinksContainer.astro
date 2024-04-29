@@ -4,10 +4,12 @@ import Menu from "../icons/menu.astro"
 const url=Astro.url.pathname;
 ---
 <div class="block gap-2 items-center sm:flex relative w-full max-sm:px-2 sm:w-fit"  x-data="{expand:false}">
-    <button @click="expand=!expand" aria-label="menu">
-        <Menu clases="text-purple-300 block sm:hidden"/>
-    </button>
-    <ul class="sm:flex sm:static items-center gap-1 max-sm:px-2 max-sm:py-1 bg-purple-800" :class="expand?'absolute left-0 right-0 z-50':'hidden'">
+    <div class="w-fit sm:w-full flex items-center justify-center">
+        <button @click="expand=!expand" aria-label="menu">
+            <Menu clases="text-purple-300 block sm:hidden"/>
+        </button>
+    </div>
+    <ul class="sm:flex sm:static items-center gap-1 max-sm:px-2 py-3 sm:py-1 bg-purple-800 sm:bg-opacity-0 bg-opacity-80 backdrop-blur-sm" :class="expand?'absolute left-0 right-0 z-50':'hidden'">
         <NavElement href="/" title="Inicio"/>
         {url==='/'&& (
             <NavElement href="#Saga" title="Saga"/>
